@@ -76,7 +76,6 @@ public class FutureQueryToolTest {
         List<Object> list2 = futureQueryTool.queryList(FutureQueryToolTest::queryDbList2);
         Map<Object, Object> map1 = futureQueryTool.queryMap(FutureQueryToolTest::queryDbMap1);
 
-        // 最后等待 5 秒
         futureQueryTool.allGet(5);
         return new DataVO(list1, list2, map1);
     }
